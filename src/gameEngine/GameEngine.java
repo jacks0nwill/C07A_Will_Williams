@@ -65,7 +65,7 @@ public class GameEngine {
 	 */
 	public void playGame() {
 		// Give player a default location of 0
-		player = new Player(0);
+		player = new Player(11);
 
 		displayInstructions() ;
 		
