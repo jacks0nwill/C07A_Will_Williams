@@ -2,12 +2,12 @@ package levelPieces;
 
 import gameEngine.Drawable;
 import gameEngine.InteractionResult;
+import gameEngine.Moveable;
 
-public class Tiger extends GamePiece{
+public class Tiger extends GamePiece implements Moveable{
 	
 	public Tiger(char symbol, String name, int location) {
 		super(symbol, name, location);
-		// TODO Auto-generated constructor stub
 	}
 
 	public InteractionResult interact(Drawable [] gameBoard, int playerLocation) {
@@ -16,6 +16,17 @@ public class Tiger extends GamePiece{
 		}
 		else {
 			return(InteractionResult.NONE);
+		}
+	}
+
+	@Override
+	public void move(Drawable[] gameBoard, int playerLocation) {
+		//TODO verify if space in front of tiger is open to move, if not remain in place
+		if (playerLocation-1 > super.getLocation()) {
+			super.setLocation(super.getLocation()+1);
+		}
+		if (playerLocation+1 < super.getLocation()) {
+			super.setLocation(super.getLocation()-1);
 		}
 	}
 	
