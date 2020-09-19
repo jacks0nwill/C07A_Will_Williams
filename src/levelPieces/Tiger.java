@@ -21,13 +21,21 @@ public class Tiger extends GamePiece implements Moveable{
 
 	@Override
 	public void move(Drawable[] gameBoard, int playerLocation) {
+		gameBoard[super.getLocation()] = null;
 		//TODO verify if space in front of tiger is open to move, if not remain in place
 		if (playerLocation-1 > super.getLocation()) {
-			super.setLocation(super.getLocation()+1);
+			if((gameBoard[super.getLocation()+1]) == null) {
+				super.setLocation(super.getLocation()+1);
+			}
+			
 		}
 		if (playerLocation+1 < super.getLocation()) {
-			super.setLocation(super.getLocation()-1);
+			if((gameBoard[super.getLocation()-1]) == null) {
+				super.setLocation(super.getLocation()-1);
+			}
 		}
+		
+		gameBoard[super.getLocation()] = this;
 	}
 	
 

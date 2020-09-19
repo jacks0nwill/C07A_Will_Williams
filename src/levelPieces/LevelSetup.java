@@ -37,6 +37,7 @@ public class LevelSetup {
 			Tiger T = new Tiger('T', "Tiger", 3);
 			board[T.getLocation()] = T;
 			movingPieces.add(T);
+			interactingPieces.add(T);
 		}
 		if (level==2) {
 			PaperWeight P= new PaperWeight('W', "Paper Weight", 5);
