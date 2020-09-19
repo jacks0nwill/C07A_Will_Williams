@@ -32,12 +32,11 @@ public class LevelSetup {
 	}
 	public void createLevel(int level) {
 		if (level==1) {
-			PaperWeight P= new PaperWeight('W', "Paper Weight", 5);
-			for( int i=0; i<GameEngine.BOARD_SIZE; i++) {
-				if(i == P.getLocation()) {
-					board[i]=P;
-				}
-			}
+			PaperWeight P = new PaperWeight('W', "Paper Weight", 5);
+			board[P.getLocation()] = P;
+			Tiger T = new Tiger('T', "Tiger", 3);
+			board[T.getLocation()] = T;
+			movingPieces.add(T);
 		}
 		if (level==2) {
 			PaperWeight P= new PaperWeight('W', "Paper Weight", 5);

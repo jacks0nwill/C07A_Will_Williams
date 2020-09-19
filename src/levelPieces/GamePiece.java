@@ -69,6 +69,7 @@ public abstract class GamePiece implements Drawable {
 		// Ensure the location remains on the board
 		if (newLocation >= 0 && newLocation < GameEngine.BOARD_SIZE)
 			location = newLocation;
+		
 	}
 	
 	@Override
