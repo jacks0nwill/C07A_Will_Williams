@@ -13,6 +13,7 @@ public class LevelSetup {
 	//TODO createLevel()
 	public LevelSetup() {
 		super();
+		board = new Drawable[GameEngine.BOARD_SIZE];
 		movingPieces = new ArrayList<GamePiece>();
 		interactingPieces = new ArrayList<GamePiece>();
 		startingLocation = 11;
