@@ -25,6 +25,7 @@ public class Hermit extends GamePiece implements Moveable{
 
 	@Override
 	public void move(Drawable[] gameBoard, int playerLocation) {
+		gameBoard[super.getLocation()] = null;
 		Random rand= new Random();
 		while(true) {
 			int pos = rand.nextInt(GameEngine.BOARD_SIZE);
@@ -33,7 +34,7 @@ public class Hermit extends GamePiece implements Moveable{
 				break;
 			}
 		}
-		
+		gameBoard[super.getLocation()] = this;
 	}
 	
 
