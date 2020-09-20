@@ -46,9 +46,9 @@ public class LevelSetup {
 			interactingPieces.add(H);
 			
 
-			Coin A = new Coin('A', "Award", 18);
-			board[A.getLocation()] = A;
-			interactingPieces.add(A);
+			Coin C = new Coin('C', "Coin", 18);
+			board[C.getLocation()] = C;
+			interactingPieces.add(C);
 			
 			GreenPipe G = new GreenPipe('G', "GreenPipe", 15);
 			board[G.getLocation()] = G;
@@ -60,12 +60,30 @@ public class LevelSetup {
 			}
 			movingPieces.clear();
 			interactingPieces.clear();
-			PaperWeight P= new PaperWeight('W', "Paper Weight", 5);
-			for( int i=0; i<GameEngine.BOARD_SIZE; i++) {
-				if(i == P.getLocation()) {
-					board[i]=P;
-				}
-			}
+			Artillery A = new Artillery('A', "Artillery", 1);
+			board[A.getLocation()] = A;
+			interactingPieces.add(A);
+			
+			PaperWeight P= new PaperWeight('W', "PaperWeight", 2);
+			board[P.getLocation()] = P;
+			
+			Coin C = new Coin('C', "Coin", 5);
+			board[C.getLocation()] = C;
+			interactingPieces.add(C);
+			
+			Tiger T = new Tiger('T', "Tiger", 19);
+			board[T.getLocation()] = T;
+			movingPieces.add(T);
+			interactingPieces.add(T);
+			
+			Hermit H = new Hermit('H', "Hermit", 16);
+			board[H.getLocation()] = H;
+			movingPieces.add(H);
+			interactingPieces.add(H);
+			
+			GreenPipe G = new GreenPipe('G', "GreenPipe", 6);
+			board[G.getLocation()] = G;
+			interactingPieces.add(G);
 		}
 	}
 	
