@@ -27,13 +27,18 @@ public class Hermit extends GamePiece implements Moveable{
 	public void move(Drawable[] gameBoard, int playerLocation) {
 		gameBoard[super.getLocation()] = null;
 		Random rand= new Random();
-		while(true) {
-			int pos = rand.nextInt(GameEngine.BOARD_SIZE);
-			if((gameBoard[pos]) == null) {
-				super.setLocation(pos);
-				break;
+		int r = rand.nextInt(10);
+		//50/50 chance to move left or right
+		if((r % 2) == 0) {
+			if(((super.getLocation()+1) < GameEngine.BOARD_SIZE) && (gameBoard[super.getLocation()+1] == null)) {
+				super.setLocation(super.getLocation() + 1);
+			}
+		}else{
+			if(((super.getLocation()-1) > 0) && (gameBoard[super.getLocation()-1] == null)) {
+				super.setLocation(super.getLocation() - 1);
 			}
 		}
+		
 		gameBoard[super.getLocation()] = this;
 	}
 	
