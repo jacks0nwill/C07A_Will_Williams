@@ -46,7 +46,7 @@ public class LevelSetup {
 			interactingPieces.add(H);
 			
 
-			Award A = new Award('A', "Award", 18);
+			Coin A = new Coin('A', "Award", 18);
 			board[A.getLocation()] = A;
 			interactingPieces.add(A);
 			
