@@ -30,7 +30,7 @@ public class LevelSetup {
 		return(startingLocation);
 	}
 	public void createLevel(int level) {
-		//TODO create both level setups
+		
 		if (level==1) {
 			PaperWeight P = new PaperWeight('W', "Paper Weight", 5);
 			board[P.getLocation()] = P;

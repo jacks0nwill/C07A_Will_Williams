@@ -11,7 +11,6 @@ public class Coin extends GamePiece {
 
 	@Override
 	public InteractionResult interact(Drawable[] gameBoard, int playerLocation) {
-		//TODO, delete after interaction
 		if(playerLocation==super.getLocation()) {
 			return(InteractionResult.GET_POINT);
 		}
