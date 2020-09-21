@@ -18,5 +18,8 @@ public class Artillery extends GamePiece {
 			return(InteractionResult.NONE);
 		}
 	}
+	public String toString() {
+		return (super.toString() + "(shoots at the player from a distance)");
+	}
 
 }

@@ -18,5 +18,8 @@ public class GreenPipe extends GamePiece {
 			return(InteractionResult.NONE);
 		}
 	}
+	public String toString() {
+		return (super.toString() + "(Transports to another dimension...)");
+	}
 
 }

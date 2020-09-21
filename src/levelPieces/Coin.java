@@ -18,5 +18,7 @@ public class Coin extends GamePiece {
 			return(InteractionResult.NONE);
 		}
 	}
-
+	public String toString() {
+		return (super.toString() + "(gives a point if the player lands on it)");
+	}
 }

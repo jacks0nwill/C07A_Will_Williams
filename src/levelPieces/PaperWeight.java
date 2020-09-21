@@ -29,7 +29,7 @@ public class PaperWeight implements Drawable {
 		
 	}
 	public String toString() {
-		return symbol + " - " + name ; 
+		return symbol + " - " + name +"(does nothing)" ; 
 	}
 
 }

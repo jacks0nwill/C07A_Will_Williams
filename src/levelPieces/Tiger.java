@@ -37,6 +37,9 @@ public class Tiger extends GamePiece implements Moveable{
 		
 		gameBoard[super.getLocation()] = this;
 	}
-	
+	public String toString() {
+		return (super.toString() + "(DANGEROUS, will kill you!)");
+	}
+
 
 }

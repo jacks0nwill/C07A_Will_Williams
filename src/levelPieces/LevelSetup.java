@@ -58,7 +58,7 @@ public class LevelSetup {
 			board[G.getLocation()] = G;
 			interactingPieces.add(G);
 			
-			System.out.println("P - Player");  //Prints information for pieces
+			System.out.println("P - Player (You)");  //Prints information for pieces
 			System.out.println(P.toString());
 			System.out.println(T.toString());
 			System.out.println(H.toString());
@@ -101,7 +101,7 @@ public class LevelSetup {
 			movingPieces.add(H2);
 			interactingPieces.add(H2);
 			
-			System.out.println("P - Player");
+			System.out.println("P - Player (You)");
 			System.out.println(A.toString());
 			System.out.println(P.toString());//Prints information for pieces
 			System.out.println(T.toString());

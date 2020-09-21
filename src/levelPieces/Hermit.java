@@ -40,6 +40,10 @@ public class Hermit extends GamePiece implements Moveable{
 		
 		gameBoard[super.getLocation()] = this;
 	}
-	
+	public String toString() {
+		
+		return (super.toString() + "(Does not like being approached)");
+	}
+
 
 }
