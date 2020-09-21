@@ -50,6 +50,10 @@ public class LevelSetup {
 			board[C.getLocation()] = C;
 			interactingPieces.add(C);
 			
+			Coin C2 = new Coin('C', "Coin", 6);
+			board[C2.getLocation()] = C2;
+			interactingPieces.add(C2);
+			
 			GreenPipe G = new GreenPipe('G', "GreenPipe", 15);
 			board[G.getLocation()] = G;
 			interactingPieces.add(G);
@@ -60,7 +64,7 @@ public class LevelSetup {
 			}
 			movingPieces.clear();
 			interactingPieces.clear();
-			Artillery A = new Artillery('A', "Artillery", 1);
+			Artillery A = new Artillery('A', "Artillery", 0);
 			board[A.getLocation()] = A;
 			interactingPieces.add(A);
 			
@@ -71,19 +75,25 @@ public class LevelSetup {
 			board[C.getLocation()] = C;
 			interactingPieces.add(C);
 			
-			Tiger T = new Tiger('T', "Tiger", 19);
+			Coin C2 = new Coin('C', "Coin", 16);
+			board[C2.getLocation()] = C2;
+			interactingPieces.add(C2);
+			
+			Tiger T = new Tiger('T', "Tiger", 20);
 			board[T.getLocation()] = T;
 			movingPieces.add(T);
 			interactingPieces.add(T);
 			
-			Hermit H = new Hermit('H', "Hermit", 16);
+			Hermit H = new Hermit('H', "Hermit", 14);
 			board[H.getLocation()] = H;
 			movingPieces.add(H);
 			interactingPieces.add(H);
 			
-			GreenPipe G = new GreenPipe('G', "GreenPipe", 6);
-			board[G.getLocation()] = G;
-			interactingPieces.add(G);
+			Hermit H2 = new Hermit('H', "Hermit", 8);
+			board[H2.getLocation()] = H2;
+			movingPieces.add(H2);
+			interactingPieces.add(H2);
+			
 		}
 	}
 	

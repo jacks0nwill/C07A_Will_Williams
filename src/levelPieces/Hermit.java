@@ -9,7 +9,6 @@ import gameEngine.Moveable;
 
 //hermit moves randomly if the player lands on them they hit the player
 public class Hermit extends GamePiece implements Moveable{
-	
 	public Hermit(char symbol, String name, int location) {
 		super(symbol, name, location);
 	}

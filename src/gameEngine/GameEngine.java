@@ -187,6 +187,7 @@ public class GameEngine {
 				gameBoard[piece.getLocation()] = null;
 				piece = null;
 				System.out.println("\nYou just won a prize!\n");
+				break;
 			}
 			if (result == InteractionResult.HIT) {
 				player.takeDamage();
