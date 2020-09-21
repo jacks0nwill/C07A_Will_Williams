@@ -4,7 +4,7 @@ import gameEngine.Drawable;
 import gameEngine.InteractionResult;
 
 public class Coin extends GamePiece {
-	//Trophy gives a point if the player lands on it
+	//Coin gives a point if the player lands on it
 	public Coin(char symbol, String name, int location) {
 		super(symbol, name, location);
 	}

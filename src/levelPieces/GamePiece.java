@@ -27,7 +27,7 @@ public abstract class GamePiece implements Drawable {
 	 * @param name TODO
 	 * @param location initial location
 	 */
-	public GamePiece(char symbol, String name, int location) {
+	public GamePiece(char symbol, String name, int location) {//constructor
 		super();
 		this.symbol = symbol;
 		this.name = name ;
@@ -52,7 +52,7 @@ public abstract class GamePiece implements Drawable {
 	 * @param playerLocation
 	 * @return
 	 */
-	public abstract InteractionResult interact(Drawable [] gameBoard, int playerLocation);
+	public abstract InteractionResult interact(Drawable [] gameBoard, int playerLocation);//abstract method for game pieces
 
 	/**
 	 * 

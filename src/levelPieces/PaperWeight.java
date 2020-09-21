@@ -1,7 +1,7 @@
 package levelPieces;
 
 import gameEngine.Drawable;
-
+//PaperWeight does nothing but take up a space
 public class PaperWeight implements Drawable {
 	protected char symbol;
 	private String name ; 
