@@ -1,0 +1,141 @@
+commit bc65a8440bb4fa02829bae0dc8e67043a4ea3e17
+Author: jacks0nwill <70932263+jacks0nwill@users.noreply.github.com>
+Date:   Mon Sep 21 17:51:45 2020 -0600
+
+    Added child toString components
+
+commit 2ba69143fda95db77fc7af81d8fc139486e77c18
+Author: jacks0nwill <70932263+jacks0nwill@users.noreply.github.com>
+Date:   Mon Sep 21 17:41:29 2020 -0600
+
+    Added printing of toStrings and added comments
+
+commit f76a3e7dd45df4d82c53f9aac7f843ee75d59a83
+Author: jacks0nwill <70932263+jacks0nwill@users.noreply.github.com>
+Date:   Mon Sep 21 14:55:57 2020 -0600
+
+    Debugged hermit and changed level setup
+
+commit b80022d7586f59baf40e0bbb5e37fb739e4c4f3a
+Author: nywilliams4232 <71280662+nywilliams4232@users.noreply.github.com>
+Date:   Sun Sep 20 15:28:05 2020 -0600
+
+    Coin now deletes itself
+
+commit aceae994748672012e05690fa1245252cdd19b00
+Author: nywilliams4232 <71280662+nywilliams4232@users.noreply.github.com>
+Date:   Sun Sep 20 15:08:29 2020 -0600
+
+    created level 2
+
+commit 617949ef84b19868ca64892ea1a81af66de3de13
+Author: nywilliams4232 <71280662+nywilliams4232@users.noreply.github.com>
+Date:   Sun Sep 20 14:46:38 2020 -0600
+
+    change award to coin
+
+commit af6d7c0f0b4b60553ffa84eeaea0d0fe6df9e0f1
+Author: nywilliams4232 <71280662+nywilliams4232@users.noreply.github.com>
+Date:   Sun Sep 20 14:39:08 2020 -0600
+
+    Updated hermit movement
+    
+    changed so that hermit only moves either one space left or one space right
+
+commit 90f60e498af23b473ab9f0d23acf150a0135dd33
+Author: nywilliams4232 <71280662+nywilliams4232@users.noreply.github.com>
+Date:   Sun Sep 20 14:27:16 2020 -0600
+
+    make hermit move
+
+commit 52ea1dc05a2e54b4e7c960f2e8602bf1258d9b1c
+Author: nywilliams4232 <71280662+nywilliams4232@users.noreply.github.com>
+Date:   Sun Sep 20 14:24:53 2020 -0600
+
+    changed tropht to award, added level 1
+
+commit ca3eac390bd0c3579e6b692e858acc556563a3c8
+Author: jacks0nwill <70932263+jacks0nwill@users.noreply.github.com>
+Date:   Sat Sep 19 13:14:25 2020 -0600
+
+    added todo to level setup
+
+commit 991337eadcb50f8f2dd540f12f044e6fc1880834
+Author: jacks0nwill <70932263+jacks0nwill@users.noreply.github.com>
+Date:   Sat Sep 19 13:13:21 2020 -0600
+
+    Added GreenPipe
+
+commit 2aa0ebe705fd7529ce5fa9696796e1656ee259fe
+Author: jacks0nwill <70932263+jacks0nwill@users.noreply.github.com>
+Date:   Sat Sep 19 13:06:44 2020 -0600
+
+    Artillery and Trophy added, Hermit movement implemented
+
+commit 82d89dbf44b237d4022f69e42430c5785d15823b
+Author: nywilliams4232 <71280662+nywilliams4232@users.noreply.github.com>
+Date:   Sat Sep 19 12:31:49 2020 -0600
+
+    added movement
+    
+    also added movement checking for tiger
+
+commit 10b0397ad3ae33afcb5b34b041aab0131ce79e14
+Author: nywilliams4232 <71280662+nywilliams4232@users.noreply.github.com>
+Date:   Sat Sep 19 11:45:16 2020 -0600
+
+    add hermit & change levelsetup
+
+commit ea67b10f18255167994394fd6c9c51a43d44a550
+Author: nywilliams4232 <71280662+nywilliams4232@users.noreply.github.com>
+Date:   Sat Sep 19 11:07:16 2020 -0600
+
+    added creation of board array
+
+commit 1a27a470c0e4cd8069a85d5f8fd2766200472dbd
+Author: jacks0nwill <70932263+jacks0nwill@users.noreply.github.com>
+Date:   Fri Sep 18 16:27:34 2020 -0600
+
+    Level setup createLevel added (skeleton) with new Piece PaperWeight
+
+commit a9cbdc1d5e29df66020b61ec1de84b33c857e6b8
+Author: jacks0nwill <70932263+jacks0nwill@users.noreply.github.com>
+Date:   Fri Sep 18 16:26:57 2020 -0600
+
+    Level setup createLevel added (skeleton) with new Piece PaperWeight
+
+commit 6a5e801191bb7f60f871e0bb716fffb9fe5bfe13
+Author: jacks0nwill <70932263+jacks0nwill@users.noreply.github.com>
+Date:   Fri Sep 18 14:17:14 2020 -0600
+
+    'get' level setup methods added
+
+commit 9f8a61f2f3aa39e8ebad3b0b45462495ff29abdd
+Author: jacks0nwill <70932263+jacks0nwill@users.noreply.github.com>
+Date:   Fri Sep 18 13:00:27 2020 -0600
+
+    Tiger moveable implemented
+
+commit d89091ad1e703f6f2a2bdbcc89856f706e4fd688
+Author: jacks0nwill <70932263+jacks0nwill@users.noreply.github.com>
+Date:   Fri Sep 18 12:38:43 2020 -0600
+
+    Tiger framework created
+
+commit ad324cc7c9ecbd6e3e01aacec01059b582d4aa0b
+Author: jacks0nwill <70932263+jacks0nwill@users.noreply.github.com>
+Date:   Thu Sep 17 16:16:57 2020 -0600
+
+    Level Setup Added
+
+commit 3addae40085d9efdf7b5ffe26873af08f5513803
+Author: jacks0nwill <70932263+jacks0nwill@users.noreply.github.com>
+Date:   Thu Sep 17 10:21:15 2020 -0600
+
+    Create .gitignore
+
+commit 232f9bae245dbdc8e16ac5a7f96db9348f5dfc83
+Author: jacks0nwill <70932263+jacks0nwill@users.noreply.github.com>
+Date:   Thu Sep 17 10:14:42 2020 -0600
+
+    Initial repo created and files added

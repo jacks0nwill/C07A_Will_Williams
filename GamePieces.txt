@@ -1,0 +1,12 @@
+Implements Drawable (no interaction, so doesn't extend GamePiece)
+	PaperWeight
+Extends GamePiece, implements Moveable
+	Hermit.  Has a random chance of moving one space to the right or left. Can be blocked.
+	Tiger.   Moves toward the player by one space per turn. Can be blocked
+Extends GamePiece with various InteractionResult
+	NONE - Conditionals in interactions of Pieces give NONE when player is not close enough for aggressive or progressive interaction.
+	HIT - Artillery (interacts when player moves 3 or 4 units away)
+	HIT - Hermit (interacts when player moves on top of the hermit)
+	KILL - Tiger (will kill a player that is on the same square or beside it)
+	ADVANCE - GreenPipe (interacts on same location)
+	GET_POINT - Coin (Gives a point if the player lands on it, then disappears). 
