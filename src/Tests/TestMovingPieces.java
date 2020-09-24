@@ -51,6 +51,24 @@ class TestMovingPieces {
 				fail("Invalid square selected");
 			// counters to ensure every valid option is chosen
 		}
+		hermit.setLocation(10);
+		//check that hermit won't move if between pieces
+		for (int i=0; i<10; i++) {
+			hermit.move(gameBoard, 13);
+			int loc2 = hermit.getLocation();
+			// ensure no other space is chosen
+			if (loc2 != 10)
+				fail("Invalid square selected");
+		}
+		
+		//check if hermit moves off board
+		for (int i=0; i<200; i++) {
+			hermit.move(gameBoard, 13);
+			int loc2 = hermit.getLocation();
+			// ensure no other space is chosen
+			if (loc2 < 0 || loc2 > 20)
+				fail("Invalid square selected");
+		}
 
 	}
 	@Test
@@ -72,5 +90,7 @@ class TestMovingPieces {
 				fail("Invalid square selected");
 
 		}
+		
+		
 	}
 }
