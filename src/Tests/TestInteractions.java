@@ -24,7 +24,7 @@ class TestInteractions {
 		Drawable [] gameBoard = new Drawable[GameEngine.BOARD_SIZE];
 		Artillery art = new Artillery('A', "Artillery", 10);
 		gameBoard[10] = art;
-		// Hit points if player on same space
+		// Hit points if player 3 or 4 away
 		assertEquals(InteractionResult.HIT, art.interact(gameBoard, 13));
 		assertEquals(InteractionResult.HIT, art.interact(gameBoard, 14));
 		assertEquals(InteractionResult.HIT, art.interact(gameBoard, 7));
@@ -46,7 +46,7 @@ class TestInteractions {
 		Drawable [] gameBoard = new Drawable[GameEngine.BOARD_SIZE];
 		Coin coin = new Coin('C', "Coin", 10);
 		gameBoard[10] = coin;
-		// Hit points if player on same space
+		// give points if player on same space
 		assertEquals(InteractionResult.GET_POINT, coin.interact(gameBoard, 10));
 		// These loops ensure no interaction if not on same space
 		for (int i=0; i<10; i++)
@@ -63,7 +63,7 @@ class TestInteractions {
 		Drawable [] gameBoard = new Drawable[GameEngine.BOARD_SIZE];
 		GreenPipe GP = new GreenPipe('G', "GreenPipe", 10);
 		gameBoard[10] = GP;
-		// Hit points if player on same space
+		// Advances player on same space
 		assertEquals(InteractionResult.ADVANCE, GP.interact(gameBoard, 10));
 		// These loops ensure no interaction if not on same space
 		for (int i=0; i<10; i++)
@@ -99,7 +99,7 @@ class TestInteractions {
 		Drawable [] gameBoard = new Drawable[GameEngine.BOARD_SIZE];
 		Tiger tig = new Tiger('T', "Tiger", 10);
 		gameBoard[10] = tig;
-		// Hit points if player on same space
+		// Kills player on same space or adjacent
 		assertEquals(InteractionResult.KILL, tig.interact(gameBoard, 11));
 		assertEquals(InteractionResult.KILL, tig.interact(gameBoard, 9));
 		assertEquals(InteractionResult.KILL, tig.interact(gameBoard, 10));
