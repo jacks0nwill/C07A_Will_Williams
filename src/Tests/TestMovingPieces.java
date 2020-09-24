@@ -7,6 +7,7 @@ import org.junit.jupiter.api.Test;
 import gameEngine.Drawable;
 import gameEngine.GameEngine;
 import levelPieces.Hermit;
+import levelPieces.PaperWeight;
 import levelPieces.Tiger;
 
 class TestMovingPieces {
@@ -22,45 +23,54 @@ class TestMovingPieces {
 	 *   (13 is "open" but has the player, so it should NOT be chosen)
 	 */
 	@Test
-	public void testTigerMovement() {
-		// Each test will create its own gameBoard
+	public void testHermitMovement() {
 		Drawable [] gameBoard = new Drawable[GameEngine.BOARD_SIZE];
-		// Start with 1, leaves 0 open
-		for (int i=1;i<=5; i++)
-			gameBoard[i] = new Doormat();
-		// Leave 6 open
-		for (int i=7; i<=11; i++)
-			gameBoard[i] = new Doormat();
-		// Leave 12, 13 and 20 open, assume player in 13
-		for (int i=14; i<20; i++)
-			gameBoard[i] = new Doormat();
-		// Place Sniper in an open space - 6
-		// Note that Sniper location will be updated via move method, 
-		// so occasionally location 6 will be open and may be chosen
+			
 		Hermit hermit = new Hermit('H', "Hermit", 10);
-		gameBoard[6] = hermit;
-		int count0 = 0;
-		int count6 = 0;
-		int count12 = 0;
-		int count20 = 0;
+		gameBoard[10] = hermit;
+		int count1 = 0;
+		int count2 = 0;
+		int loc =0;
+		for (int i=0; i<200; i++) {
+			int before=loc;
+			hermit.move(gameBoard, 13);
+			loc = hermit.getLocation();
+			if (loc == before+1) count1++;
+			if (loc == before-1) count2++;
+		}
+		assert(count1 > 1);
+		assert(count2 > 1);
+		
+		gameBoard[9] = new PaperWeight('P', "PaperWeight", 9);
+		gameBoard[11] = new PaperWeight('P', "PaperWeight", 11);
 		for (int i=0; i<200; i++) {
 			hermit.move(gameBoard, 13);
-			int loc = hermit.getLocation();
+			int loc2 = hermit.getLocation();
 			// ensure no other space is chosen
-			if (loc != 0 && loc != 6 && loc != 12 && loc != 20)
+			if (loc2 == 9 || loc2 == 11 || loc2<0 || loc2>20)
 				fail("Invalid square selected");
 			// counters to ensure every valid option is chosen
-			if (loc == 0) count0++;
-			if (loc == 6) count6++;
-			if (loc == 12) count12++;
-			if (loc == 20) count20++;
 		}
-		// Ensure each option is randomly chosen some number of times. 
-		assert(count0 > 1);
-		assert(count6 > 1);
-		assert(count12 > 1);
-		assert(count20 > 1);		
+
 	}
+	@Test
+	public void testTigerMovement() {
+		Drawable [] gameBoard = new Drawable[GameEngine.BOARD_SIZE];
+		Tiger tiger = new Tiger('T', "Tiger", 10);
+		gameBoard[10] = tiger;
+		for (int i=0; i<10; i++) {
+			tiger.move(gameBoard, 20);
+			int loc = tiger.getLocation();
+			if (loc < 10 || loc > 20)
+				fail("Invalid square selected");
+		}
+		gameBoard[11] = new PaperWeight('P', "PaperWeight", 11);
+		for (int i=0; i<200; i++) {
+			tiger.move(gameBoard, 1);
+			int loc2 = tiger.getLocation();
+			if (loc2< 11)
+				fail("Invalid square selected");
 
-
+	}
+	
 }
