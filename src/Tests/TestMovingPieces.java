@@ -71,6 +71,6 @@ class TestMovingPieces {
 			if (loc2< 11)
 				fail("Invalid square selected");
 
+		}
 	}
-	
 }
